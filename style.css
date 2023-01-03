@@ -1,0 +1,20 @@
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    border: solid red;
+    height: 15vh;
+}
+
+main {
+    border: solid black;
+    height: 100%;
+}
+
+footer {
+    border: solid blue;
+    height: 15vh;
+}
