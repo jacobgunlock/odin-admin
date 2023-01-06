@@ -1,5 +1,4 @@
 body {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 1%;
@@ -10,9 +9,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: lightgreen;
+    background-color: #0EBBAE;
     padding: 0 5px;
     border-radius: 20px;
+    border: solid;
 }
 .logo {
     border-radius: 50%;
@@ -51,16 +51,16 @@ header {
 }
 
 main {
-    height: 100vh;
     display: grid;
-    grid-template-columns: fit-content(10%) auto;
+    grid-template-columns: fit-content(100%) 1fr;
     padding: 1% 0;
     column-gap: 1%;
 }
 .sidebar {
-    background-color: lightcoral;
+    background-color: #FE7833;
     padding: 30px 20px;
     border-radius: 20px;
+    border: solid;
 }
 .sidebar>form{
     display: flex;
@@ -85,7 +85,6 @@ form>a {
     justify-content: flex-end;
 }
 .content {    
-    background-color: aqua;
     border-radius: 20px;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -98,76 +97,135 @@ form>a {
     border-radius: 20px;
     display: grid;
     grid-template: 1fr 1fr/1fr 1fr;
-    gap: 1%;
+    gap: 2%;
 }
 
 .project{
     border-radius: 20px;
+    border: solid;
 }
 
 .project:first-child {
     height: 100%;
-    background-color: coral;
     grid-column: span 2;
+    background-image: url("https://www.involve.me/assets/images/blog/how-to-create-a-simple-price-calculator-and-capture-more-leads/calculator-M.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
 }
 
 
-.one{
+.one,
+.two,
+.three{
     display: grid;
     grid-template: 1fr 2fr / 1fr 1fr;
     align-items: center;
-    justify-items: center;
 }
 
-.one>h2 {
-    grid-column: span 2;
+.two {
+    background-image: url("https://i.pinimg.com/736x/44/d7/ac/44d7ac222f3033492705a09e0bac7193--sketch-free-photo-illustration.jpg");
+    background-size: 150% 100%;
+}
+
+.three{
+    background-image: url("https://media.istockphoto.com/id/1321292542/vector/online-registration.jpg?s=612x612&w=0&k=20&c=UU3uHDDV17OwF_0ywE2JClrsoR_2YC2fNXS40f0RUzU=");
+    background-size: 150% 100%;
+}
+
+.one>h3,
+.two>h3,
+.three>h3{
+    background-color: white;
     font-size: 2rem;
-    background-color: aqua;
     padding: 5%;
-    border-radius: 20px;
-}
-
-.one>a>img {
-    height: 20vh;
-    width: 20vh;
     border-radius: 20px;
     border: solid;
+    border-left: transparent;
+    transform: translateX(-3px);
 }
-.one>p{
+
+.one>p,
+.two>p,
+.three>p {
+    background-color: white;
     width: 50%;
     text-align: center;
-    padding: 5%;
-    background-color: aqua;
+    padding: 10px 25px;
     border-radius: 20px;
+    border: solid;
+    border-left: transparent;
+    transform: translateX(-3px);
 }
 
 .project:not(:first-child) {
-    display: grid;
     justify-content: center;
     height: 100%;
-    background-color: coral;
 }
+
+.filler{
+    margin: 5% 1%;
+    display: flex;
+    height: 25%;
+    border: solid;
+    border-radius: 20px;
+    background-color: lightblue;
+}
+
+.filler:last-child{
+    background-color: rgb(233, 108, 108);
+}
+
 .announcements{
+    background-image: url('https://img.freepik.com/premium-vector/megaphone-loudspeaker-with-bubble-speech-as-announcement-message-vector-flat-cartoon_101884-687.jpg?w=2000');
+    background-size: 100% 100%;
     height: 100%;
-    background-color: red;
     border-radius: 20px;
-    display: grid;
-    justify-content: center;
+    border: solid;
+    padding: 2% 0 2% 15%;
+    margin: 1%;
 }
-.events{
-    height: 100%;
-    background-color: green;
-    grid-column: 2;
+
+.announcements>h3 {
+    border: solid;
     border-radius: 20px;
-    display: grid;
+    border-right: transparent;
+    transform: translate(3px, -10px);
+    background-color: white;
+    height: 3em;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-footer {
-    height: 2rem;
-    background-color: blue;
+.events{
+    background-image: url('https://t3.ftcdn.net/jpg/02/77/18/82/360_F_277188285_BmZ7gYMS6mefo8uFUDTwtaeFZpgI5Dz6.jpg');
+    background-size: 200% 100%;
+    background-position: center 30px;
+    height: 100%;
+    border: solid;
     border-radius: 20px;
+    padding: 2% 0 2% 15%;
+}
+
+.events>h3 {
+    border: solid;
+    border-radius: 20px;
+    border-right: transparent;
+    transform: translate(3px, -10px);
+    background-color: white;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    height: 20px;
+    background-color: #0EBBAE;
+    border-radius: 20px;
+    border: solid;
+    margin: 1%;
 }
 
 @media screen and (max-width: 700px) {
@@ -178,19 +236,30 @@ footer {
     .projects {
         display: flex;
         flex-direction: column;
-        height: 300%;
+        height: 100%;
         gap: 2%;
     }
-
-    .one{
+    
+    .project {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        min-height: 0;
     }
 
-    .one>p{
-    }
-    .announcements{
-    }
     .events {
+        height: 200px;
+        background-size: 100% 100%;
+        background-position: 0px 40px;
     }
+
+    .announcements{
+        height: 200px;
+    }
+
+    .filler{
+        height: 0px;
+        border: 0;
+    }
+
 }
