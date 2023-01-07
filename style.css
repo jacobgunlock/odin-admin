@@ -2,6 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 1%;
+    background-color: darkgr;
 }
 
 header {
@@ -10,9 +11,11 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #0EBBAE;
-    padding: 0 5px;
+    margin: 1%;
     border-radius: 20px;
     border: solid;
+    box-shadow: rgba(0, 0, 0, 0.6) 2px 2px 4px;
+
 }
 .logo {
     border-radius: 50%;
@@ -39,7 +42,7 @@ header {
     align-items: center;
     justify-content: center;
     height: 100%;
-    margin: 0 1%;
+    margin: 0;
     text-align: center;
 }
 .profile-picture {
@@ -47,37 +50,42 @@ header {
     height: 80%;
 }
 .name {
-    margin: 0 3%;
+    margin: 0 0 0 3%;
+    border: solid;
+    border-radius: 20px 0 0 20px;
+    background-color: white;
+    transform: translateX(2px);
 }
 
 main {
     display: grid;
     grid-template-columns: fit-content(100%) 1fr;
-    padding: 1% 0;
+    margin: 1%;
     column-gap: 1%;
 }
 .sidebar {
     background-color: #FE7833;
-    padding: 30px 20px;
+    padding: 30px 10px 30px 0px;
     border-radius: 20px;
     border: solid;
+    box-shadow: rgba(0, 0, 0, 0.6) 2px 2px 4px;
+
 }
 .sidebar>form{
     display: flex;
     height: 50%;
     flex-direction: column;
-    align-items: center;
     row-gap: 50px;
 }
 form>a {
     text-decoration: none;
     color: black;
-    border: solid 1px;
-    border-radius: 20px;
+    border: solid;
+    border-radius: 0 20px 20px 0;
     text-align: center;
-    width: 100%;
     background-color: white;
-    padding: 2px;
+    padding: 5px;
+    transform: translateX(-2px);
 }
 .bottom{
     display: flex;
@@ -89,7 +97,6 @@ form>a {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1%;
-    padding: 1%;
 }
 .projects {
     height: 100%;
@@ -103,6 +110,7 @@ form>a {
 .project{
     border-radius: 20px;
     border: solid;
+    box-shadow: rgba(0, 0, 0, 0.6) 2px 2px 4px;
 }
 
 .project:first-child {
@@ -139,23 +147,22 @@ form>a {
     background-color: white;
     font-size: 2rem;
     padding: 5%;
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
     border: solid;
-    border-left: transparent;
-    transform: translateX(-3px);
+    transform: translateX(-2px);
 }
 
 .one>p,
 .two>p,
 .three>p {
+    grid-row: 2;
     background-color: white;
     width: 50%;
     text-align: center;
     padding: 10px 25px;
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
     border: solid;
-    border-left: transparent;
-    transform: translateX(-3px);
+    transform: translateX(-2px);
 }
 
 .project:not(:first-child) {
@@ -170,6 +177,8 @@ form>a {
     border: solid;
     border-radius: 20px;
     background-color: lightblue;
+    box-shadow: rgba(0, 0, 0, 0.6) 2px 2px 4px;
+
 }
 
 .filler:last-child{
@@ -184,13 +193,14 @@ form>a {
     border: solid;
     padding: 2% 0 2% 15%;
     margin: 1%;
+    box-shadow: rgba(0, 0, 0, 0.6) 2px 2px 4px;
+
 }
 
 .announcements>h3 {
     border: solid;
-    border-radius: 20px;
-    border-right: transparent;
-    transform: translate(3px, -10px);
+    border-radius: 20px 0 0 20px;
+    transform: translate(2px, -10px);
     background-color: white;
     height: 3em;
     display: flex;
@@ -206,13 +216,14 @@ form>a {
     border: solid;
     border-radius: 20px;
     padding: 2% 0 2% 15%;
+    box-shadow: rgba(0, 0, 0, 0.6) 2px 2px 4px;
+
 }
 
 .events>h3 {
     border: solid;
-    border-radius: 20px;
-    border-right: transparent;
-    transform: translate(3px, -10px);
+    border-radius: 20px 0 0 20px;
+    transform: translate(2px, -10px);
     background-color: white;
     height: 3em;
     display: flex;
@@ -226,6 +237,8 @@ form>a {
     border-radius: 20px;
     border: solid;
     margin: 1%;
+    box-shadow: rgba(0, 0, 0, 0.6) 2px 2px 4px;
+
 }
 
 @media screen and (max-width: 700px) {
@@ -245,6 +258,7 @@ form>a {
         flex-direction: column;
         align-items: flex-start;
         min-height: 0;
+        padding: 15px 0;
     }
 
     .events {
@@ -261,5 +275,10 @@ form>a {
         height: 0px;
         border: 0;
     }
+
+    .sidebar {
+        margin-right: 5%;
+    }
+
 
 }
